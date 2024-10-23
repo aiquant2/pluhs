@@ -7,27 +7,69 @@
     "vscode": "^1.94.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+     "Snippets"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/aiquant2/pluhs.git"
   },
   "contributes": {
+    "snippets": [
+      {
+        "language": "haskell",
+        "path": "./snippets/haskell-snippets.json"
+      },
+      {
+        "language": "plutus",
+        "path": "./snippets/plutus-snippets.json"
+
+      }
+    ],
+    "viewsContainers": {
+    "activitybar": [
+      {
+        "id": "package-explorer",
+        "title": "Package Explorer",
+        "icon": "media/activity-icon.svg"
+      }
+    ],
+    "panel": [
+      {
+        "id": "package-explorer1",
+        "title": "Package Explorer1",
+        "icon": "media/activity-icon.svg"
+      }
+    ]
+  },
+  "views": {
+    "package-explorer": [
+      {
+        "id": "nodeDependencies",
+        "name": "Node Dependencies",
+        "icon": "media/activity-icon.svg",
+        "contextualTitle": "Package Explorer"
+      }
+    ]
+  },
     "languages": [
       {
         "id": "plutus",
         "aliases": [
-          "Plutus"
+          "Plutus",
+          "Haskell"
+
         ],
         "extensions": [
-          ".plutus"
+          
+          ".hs"
         ],
         "configuration": "./configuration/plutus-configuration.json"
       },
       {
         "id": "haskell",
         "aliases": [
+         "Plutus",
           "Haskell"
         ],
         "extensions": [

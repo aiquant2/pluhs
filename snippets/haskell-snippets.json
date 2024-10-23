@@ -1,0 +1,210 @@
+{
+    "snippets": {
+      "Definition": {
+        "prefix": "=",
+        "body": [
+          "${1:name} ${2:pattern} = ${0:definition}"
+        ],
+        "description": "Insert a Haskell definition"
+      },
+      "Function": {
+        "prefix": "fun",
+        "body": [
+          "${1:name} :: ${2:Type}",
+          "${1} ${3:pattern} ${4/.+/= /}${4:definition}"
+        ],
+        "description": "Insert a Haskell function definition"
+      },
+      "Guard": {
+        "prefix": "|",
+        "body": [
+          "| ${1:predicate} = ${0:definition}"
+        ],
+        "description": "Insert a guard statement"
+      },
+      "Haddock Postfix": {
+        "prefix": "|",
+        "body": [
+          "| ${0:documentation}"
+        ],
+        "description": "Insert Haddock documentation postfix"
+      },
+      "Haddock Prefix": {
+        "prefix": "^",
+        "body": [
+          "^ ${0:documentation}"
+        ],
+        "description": "Insert Haddock documentation prefix"
+      },
+      "#!/usr/bin/env…": {
+        "prefix": "#! ",
+        "body": [
+          "#!/usr/bin/env ${1:runhaskell}"
+        ],
+        "description": "Insert shebang for Haskell scripts"
+      },
+      "Lambda Expression": {
+        "prefix": "\\",
+        "body": [
+          "\\${1:pattern} -> ${0:expression}"
+        ],
+        "description": "Insert a lambda expression"
+      },
+      "Left Arrow": {
+        "prefix": "<",
+        "body": [
+          "${1:name} <- ${0:expression}"
+        ],
+        "keyEquivalent": "^,",
+        "description": "Insert left arrow binding"
+      },
+      "List Comprehension": {
+        "prefix": "[",
+        "body": [
+          "[ ${1:expression} | ${2:name} <- ${3:expression} ${4/.+/, /}${4:condition} ]"
+        ],
+        "description": "Insert a list comprehension"
+      },
+      "Main": {
+        "prefix": "main",
+        "body": [
+          "module Main where\n\nmain :: IO ()\nmain = ${0:putStrLn \"Hello World\"}"
+        ],
+        "description": "Insert a main function template"
+      },
+      "Right Arrow": {
+        "prefix": ">",
+        "body": [
+          "${1:expression} -> ${0:expression}"
+        ],
+        "keyEquivalent": "^.",
+        "description": "Insert right arrow function definition"
+      },
+      "Type Signature": {
+        "prefix": "::",
+        "body": [
+          "${1:name} :: ${0:Type}"
+        ],
+        "description": "Insert a type signature"
+      },
+      "Type Constraint": {
+        "prefix": "=",
+        "body": [
+          "(${1:Class}) => ${0:expression}"
+        ],
+        "description": "Insert a type constraint"
+      },
+      "Type Sequence": {
+        "prefix": "-",
+        "body": [
+          "${1:Type} -> ${0:Type}"
+        ],
+        "description": "Insert a type sequence"
+      },
+      "case ... of ...": {
+        "prefix": "case",
+        "body": [
+          "case ${1:expression} of",
+          "    ${2:pattern} -> ${3:expression}",
+          "    ${4:otherwise} -> ${5:expression}"
+        ],
+        "description": "Create a case expression"
+      },
+      "class ...": {
+        "prefix": "cla",
+        "body": [
+          "class ${1:Class} where",
+          "    ${0:definition}"
+        ],
+        "description": "Define a class"
+      },
+      "data ...": {
+        "prefix": "dat",
+        "body": [
+          "data ${1:Type} = ${0:Other}"
+        ],
+        "description": "Define a data type"
+      },
+      "deriving ...": {
+        "prefix": "der",
+        "body": [
+          "deriving (${0:Class})"
+        ],
+        "description": "Add deriving clause"
+      },
+      "do ...": {
+        "prefix": "do",
+        "body": [
+          "do",
+          "    ${1:return ${0:expression}}"
+        ],
+        "description": "Create a do block"
+      },
+      "if ... then ... else ...": {
+        "prefix": "if",
+        "body": [
+          "if ${1:condition} then ${2:expression} else ${3:expression}"
+        ],
+        "description": "Create an if-then-else expression"
+      },
+      "import ... hiding ...": {
+        "prefix": "imph",
+        "body": [
+          "import ${1:Module}${2/.+/ hiding (/}${2:function}${2/.+/)/}$0"
+        ],
+        "description": "Import a module while hiding functions"
+      },
+      "import ...": {
+        "prefix": "imp",
+        "body": [
+          "import ${1:Module}${2/.+/ (/}${2:function}${2/.+/)/}$0"
+        ],
+        "description": "Import a module"
+      },
+      "import qualified ...": {
+        "prefix": "impq",
+        "body": [
+          "import qualified ${1:Module}${2/.+/ as /}${2:Mod}${3/.+/ (/}${3:function}${3/.+/)/}$0"
+        ],
+        "description": "Import a module qualified"
+      },
+      "instance ...": {
+        "prefix": "ins",
+        "body": [
+          "instance ${1:Class} ${2:Type} where",
+          "    ${0:definition}"
+        ],
+        "description": "Define an instance"
+      },
+      "let ...": {
+        "prefix": "let",
+        "body": [
+          "let ${1:name} = ${2:expression} in ${0:expression}"
+        ],
+        "description": "Create a let binding"
+      },
+      "newtype ...": {
+        "prefix": "new",
+        "body": [
+          "newtype ${1:Type} = ${0:Other}"
+        ],
+        "description": "Define a newtype"
+      },
+      "type ...": {
+        "prefix": "typ",
+        "body": [
+          "type ${1:Type} = ${0:Other}"
+        ],
+        "description": "Define a type synonym"
+      },
+      "where ...": {
+        "prefix": "where",
+        "body": [
+          "where",
+          "    ${0:definitions}"
+        ],
+        "description": "Add where clause"
+      }
+    }
+  }
+  

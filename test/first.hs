@@ -55,3 +55,6 @@ redeem escrow = do
     let tx = Constraints.mustPayToPubKey (seller escrow) (Ada.lovelaceValueOf (amount escrow))
     ledgerTx <- submitTxConstraints (validator escrow) tx
     void $ awaitTxConfirmed $ getCardanoTxId ledgerTx
+
+
+
