@@ -1,0 +1,5 @@
+# .gitattributes
+* text=auto
+*.md text
+*.js text
+*.json text

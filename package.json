@@ -1,0 +1,55 @@
+{
+  "name": "plu-hs",
+  "displayName": "pluhs",
+  "description": "Extension for Plutus and Haskell language integration with a Cardano node",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aiquant2/pluhs.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "plutus",
+        "aliases": [
+          "Plutus"
+        ],
+        "extensions": [
+          ".plutus"
+        ],
+        "configuration": "./configuration/plutus-configuration.json"
+      },
+      {
+        "id": "haskell",
+        "aliases": [
+          "Haskell"
+        ],
+        "extensions": [
+          ".hs"
+        ],
+        "configuration": "./configuration/haskell-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "plutus",
+        "scopeName": "source.plutus",
+        "path": "./syntaxes/plutus.tmLanguage.json"
+      },
+      {
+        "language": "haskell",
+        "scopeName": "source.haskell",
+        "path": "./syntaxes/haskell.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

@@ -1,0 +1,1588 @@
+{
+	"plist": {
+		"dict": {
+			"key": [
+				"fileTypes",
+				"firstLineMatch",
+				"name",
+				"patterns",
+				"repository",
+				"scopeName",
+				"uuid"
+			],
+			"array": [
+				{
+					"string": [
+						"pluto",
+						"lua"
+					]
+				},
+				{
+					"dict": {
+						"key": "include",
+						"string": "#pluto"
+					}
+				}
+			],
+			"string": [
+				"\\A#!.*?\\bpluto(\\d+(\\.\\d+)?)?\\b|\\A--\\s+-\\*-\\s*pluto\\s*-\\*-|pluto_use",
+				"Pluto",
+				"source.pluto",
+				"39640FE2-5354-4838-B02A-712D069BA69A"
+			],
+			"dict": {
+				"key": [
+					"pluto",
+					"block-comment",
+					"simpleexp",
+					"string_inner",
+					"string_interpolation",
+					"annotations"
+				],
+				"dict": [
+					{
+						"key": "patterns",
+						"array": {
+							"dict": [
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"\\b(function)(?:\\s+(?:[a-zA-Z_][a-zA-Z0-9_]*([.:]))?([a-zA-Z_][a-zA-Z0-9_]*))?\\s*(\\()",
+										"(\\))(?:(:)\\s+(void|\\??(?:(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\|)*(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\??))?(\\s*<nodiscard>)?",
+										"meta.function.pluto"
+									],
+									"dict": [
+										{
+											"key": [
+												"1",
+												"2",
+												"3",
+												"4"
+											],
+											"dict": [
+												{
+													"key": "name",
+													"string": "storage.type.function.pluto"
+												},
+												{
+													"key": "name",
+													"string": "punctuation.separator.parameter.pluto"
+												},
+												{
+													"key": "name",
+													"string": "entity.name.function.pluto"
+												},
+												{
+													"key": "name",
+													"string": "punctuation.section.group.begin.pluto"
+												}
+											]
+										},
+										{
+											"key": [
+												"1",
+												"2",
+												"3",
+												"4"
+											],
+											"dict": [
+												{
+													"key": "name",
+													"string": "punctuation.section.group.end.pluto"
+												},
+												{
+													"key": "name",
+													"string": "punctuation.separator.colon.pluto"
+												},
+												{
+													"key": "name",
+													"string": "storage.type.primitive.pluto"
+												},
+												{
+													"key": "name",
+													"string": "storage.type.attribute.pluto"
+												}
+											]
+										}
+									],
+									"array": {
+										"dict": [
+											{
+												"key": "include",
+												"string": "#block-comment"
+											},
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													"\\b(public|private|protected)\\s",
+													"storage.modifier.access.pluto"
+												]
+											},
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													"[a-zA-Z_][a-zA-Z0-9_]*",
+													"variable.parameter.function.pluto"
+												]
+											},
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													",",
+													"punctuation.separator.comma.pluto"
+												]
+											},
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													"\\.\\.\\.",
+													"constant.language.pluto"
+												]
+											},
+											{
+												"key": [
+													"match",
+													"captures",
+													"name"
+												],
+												"string": [
+													"(:)\\s+(\\??(?:(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\|)*(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\??)",
+													"meta.typehint.pluto"
+												],
+												"dict": {
+													"key": [
+														"1",
+														"2"
+													],
+													"dict": [
+														{
+															"key": "name",
+															"string": "punctuation.separator.colon.pluto"
+														},
+														{
+															"key": "name",
+															"string": "storage.type.primitive.pluto"
+														}
+													]
+												}
+											},
+											{
+												"key": [
+													"begin",
+													"beginCaptures",
+													"end",
+													"patterns",
+													"name"
+												],
+												"string": [
+													"=",
+													"(?=[,\\)])",
+													"meta.default-arguments.pluto"
+												],
+												"dict": {
+													"key": "0",
+													"dict": {
+														"key": "name",
+														"string": "keyword.operator.assignment.pluto"
+													}
+												},
+												"array": {
+													"dict": {
+														"key": "include",
+														"string": "#pluto"
+													}
+												}
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"match",
+										"captures",
+										"name"
+									],
+									"string": [
+										"\\b(function)($|\\s+)(?:[a-zA-Z_][a-zA-Z0-9_]*([.:]))?([a-zA-Z_][a-zA-Z0-9_]*)?",
+										"meta.function.incomplete.pluto"
+									],
+									"dict": {
+										"key": [
+											"1",
+											"2",
+											"3"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "storage.type.function.pluto"
+											},
+											{
+												"key": "name",
+												"string": "punctuation.separator.parameter.pluto"
+											},
+											{
+												"key": "name",
+												"string": "entity.name.function.pluto"
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"patterns"
+									],
+									"string": [
+										"\\|(?=[a-zA-Z0-9_,\\s]*\\|\\s*->)",
+										"(\\|)\\s*(->)"
+									],
+									"dict": [
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.section.group.begin.pluto"
+											}
+										},
+										{
+											"key": [
+												"1",
+												"2"
+											],
+											"dict": [
+												{
+													"key": "name",
+													"string": "punctuation.section.group.end.pluto"
+												},
+												{
+													"key": "name",
+													"string": "storage.type.function.arrow.pluto"
+												}
+											]
+										}
+									],
+									"array": {
+										"dict": [
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													"[a-zA-Z_][a-zA-Z0-9_]*",
+													"variable.parameter.function.pluto"
+												]
+											},
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													",",
+													"punctuation.separator.comma.pluto"
+												]
+											}
+										]
+									}
+								},
+								{
+									"key": "include",
+									"string": "#simpleexp"
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\(",
+										"punctuation.section.group.begin.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\)",
+										"punctuation.section.group.end.pluto"
+									]
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name"
+									],
+									"string": [
+										"(?<!--)\\[(=*)\\[",
+										"\\]\\1\\]",
+										"string.quoted.other.multiline.pluto"
+									],
+									"dict": [
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.definition.string.begin.pluto"
+											}
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.definition.string.end.pluto"
+											}
+										}
+									]
+								},
+								{
+									"key": [
+										"captures",
+										"match",
+										"name"
+									],
+									"dict": {
+										"key": "1",
+										"dict": {
+											"key": "name",
+											"string": "punctuation.definition.comment.pluto"
+										}
+									},
+									"string": [
+										"\\A(#!).*$\\n?",
+										"comment.line.shebang.pluto"
+									]
+								},
+								{
+									"key": "include",
+									"string": "#block-comment"
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"-->?",
+										"\\n",
+										"comment.line.double-dash.pluto"
+									],
+									"dict": {
+										"key": "0",
+										"dict": {
+											"key": "name",
+											"string": "punctuation.definition.comment.pluto"
+										}
+									},
+									"array": {
+										"dict": {
+											"key": "include",
+											"string": "#annotations"
+										}
+									}
+								},
+								{
+									"key": [
+										"captures",
+										"match",
+										"name"
+									],
+									"dict": {
+										"key": "1",
+										"dict": {
+											"key": "name",
+											"string": "keyword.control.goto.pluto"
+										}
+									},
+									"string": [
+										"\\b(goto)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+										"meta.goto.pluto"
+									]
+								},
+								{
+									"key": [
+										"captures",
+										"match",
+										"name"
+									],
+									"dict": {
+										"key": [
+											"1",
+											"2"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "punctuation.definition.label.begin.pluto"
+											},
+											{
+												"key": "name",
+												"string": "punctuation.definition.label.end.pluto"
+											}
+										]
+									},
+									"string": [
+										"(::)[a-zA-Z_][a-zA-Z0-9_]*(::)",
+										"meta.goto-label.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\?\\?",
+										"keyword.operator.nullcoal.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\?\\.",
+										"punctuation.accessor.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"captures",
+										"name"
+									],
+									"string": [
+										"(\\?)\\[",
+										"meta.safe-navigation-array.pluto"
+									],
+									"dict": {
+										"key": "1",
+										"dict": {
+											"key": "name",
+											"string": "punctuation.accessor.pluto"
+										}
+									}
+								},
+								{
+									"key": [
+										"match",
+										"captures"
+									],
+									"string": "(\\|>)\\s*(?:[a-zA-Z_][a-zA-Z0-9_]*([.:]))?([a-zA-Z_][a-zA-Z0-9_]*)",
+									"dict": {
+										"key": [
+											"1",
+											"2",
+											"3"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "keyword.operator.pipe.pluto"
+											},
+											{
+												"key": "name",
+												"string": "punctuation.separator.colon.pluto"
+											},
+											{
+												"key": "name",
+												"string": "support.function.any-method.pluto"
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"<(const|close)>",
+										"storage.type.attribute.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\$define\\b",
+										"storage.modifier.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\+|-|%|#|\\*|\\/|\\^|==|~=|!=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)|\\$|\\||~|&",
+										"keyword.operator.logical.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\:?=|->",
+										"keyword.operator.assignment.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\?(?![:(])",
+										"keyword.operator.ternary.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<=\\s)\\:(?!\\w)",
+										"keyword.operator.ternary.pluto"
+									]
+								},
+								{
+									"key": [
+										"name",
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"patterns"
+									],
+									"string": [
+										"meta.class.pluto",
+										"\\b((?<![.:])(?:pluto_)?class)\\s+(?!begin)(?!end)(?:[a-zA-Z_][a-zA-Z0-9_]*(\\.))?([a-zA-Z_][a-zA-Z0-9_]*)?",
+										"\\bend\\b"
+									],
+									"dict": [
+										{
+											"key": [
+												"1",
+												"2",
+												"3"
+											],
+											"dict": [
+												{
+													"key": "name",
+													"string": "storage.type.class.pluto"
+												},
+												{
+													"key": "name",
+													"string": "punctuation.separator.parameter.pluto"
+												},
+												{
+													"key": "name",
+													"string": "entity.name.type.class.pluto"
+												}
+											]
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "keyword.control.pluto"
+											}
+										}
+									],
+									"array": {
+										"dict": [
+											{
+												"key": [
+													"begin",
+													"beginCaptures",
+													"end"
+												],
+												"string": [
+													"\\b(public|private|protected)\\b",
+													"\\w+"
+												],
+												"dict": {
+													"key": "1",
+													"dict": {
+														"key": "name",
+														"string": "storage.modifier.access.pluto"
+													}
+												}
+											},
+											{
+												"key": [
+													"match",
+													"captures",
+													"name"
+												],
+												"string": [
+													"(:)\\s+(\\??(?:(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\|)*(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\??)",
+													"meta.typehint.pluto"
+												],
+												"dict": {
+													"key": [
+														"1",
+														"2"
+													],
+													"dict": [
+														{
+															"key": "name",
+															"string": "punctuation.separator.colon.pluto"
+														},
+														{
+															"key": "name",
+															"string": "storage.type.primitive.pluto"
+														}
+													]
+												}
+											},
+											{
+												"key": "include",
+												"string": "#pluto"
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"captures",
+										"match",
+										"name"
+									],
+									"dict": {
+										"key": [
+											"1",
+											"2",
+											"3",
+											"4"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "storage.type.enum.pluto"
+											},
+											{
+												"key": "name",
+												"string": "keyword.control.pluto"
+											},
+											{
+												"key": "name",
+												"string": "entity.name.type.enum.pluto"
+											},
+											{
+												"key": "name",
+												"string": "keyword.control.pluto"
+											}
+										]
+									},
+									"string": [
+										"\\b((?:pluto_)?enum(?:\\s+class)?)(?:\\s+(begin)|(?:\\s+([a-zA-Z_][a-zA-Z0-9_]*)?)(?:\\s+(begin))?)?",
+										"meta.enum.pluto"
+									]
+								},
+								{
+									"key": [
+										"captures",
+										"match",
+										"name"
+									],
+									"dict": {
+										"key": [
+											"1",
+											"2",
+											"3"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "storage.modifier.extends.pluto"
+											},
+											{
+												"key": "name",
+												"string": "punctuation.separator.parameter.pluto"
+											},
+											{
+												"key": "name",
+												"string": "entity.other.inherited-class.pluto"
+											}
+										]
+									},
+									"string": [
+										"\\b(extends)\\s+(?:[a-zA-Z_][a-zA-Z0-9_]*(\\.))?([a-zA-Z_][a-zA-Z0-9_]*)?",
+										"meta.extends.pluto"
+									]
+								},
+								{
+									"key": [
+										"captures",
+										"match",
+										"name"
+									],
+									"dict": {
+										"key": [
+											"1",
+											"2",
+											"3"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "keyword.control.pluto"
+											},
+											{
+												"key": "name",
+												"string": "punctuation.separator.parameter.pluto"
+											},
+											{
+												"key": "name",
+												"string": "support.class.pluto"
+											}
+										]
+									},
+									"string": [
+										"\\b(?<![.:])(new|pluto_new|instanceof)\\s+(?:[a-zA-Z_][a-zA-Z0-9_]*(\\.))?([a-zA-Z_][a-zA-Z0-9_]*)?",
+										"meta.classoperator.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\b(?<![.:])(break|continue|do|else|for|if|elseif|goto|return|switch|pluto_switch|then|repeat|while|until|end|in|as|case|default|begin|pluto_use|pluto_try|pluto_catch|try|catch)\\b",
+										"keyword.control.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"captures"
+									],
+									"string": "\\b(?<!\\.)(local|global)\\s+(?!class)(?!pluto_class)(?!function)(?:(and|break|do|else|elseif|end|false|for|function|goto|if|in|local|nil|not|or|repeat|pluto_use|pluto_switch|pluto_continue|pluto_enum|pluto_new|pluto_class|pluto_export|pluto_try|pluto_catch|switch|continue|enum|new|class|export|try|catch|return|then|true|until|while)\\b|\\w+)(?:\\s*(:)\\s+(\\??(?:(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\|)*(?:string|number|int|float|bool(?:ean)?|function|table|userdata)\\??))?",
+									"dict": {
+										"key": [
+											"1",
+											"2",
+											"3",
+											"4"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "storage.modifier.pluto"
+											},
+											{
+												"key": "name",
+												"string": "invalid.name.reserved.not-narrow.not-overridable.not-optional.not-special.pluto"
+											},
+											{
+												"key": "name",
+												"string": "punctuation.separator.colon.pluto"
+											},
+											{
+												"key": "name",
+												"string": "storage.type.primitive.pluto"
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\b(?<![.\\:])(local|global|static|export|pluto_export)\\b",
+										"storage.modifier.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![^.]\\.|:)\\b(false|nil|true)\\b|(?<![.])\\.\\.\\.(?!\\.)",
+										"constant.language.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![^.]\\.|:)\\b(_G|_VERSION|_PVERSION|_PSOUP|math\\.(pi|huge|mininteger|maxinteger)|os\\.platform|json\\.(null|withnull|withorder))\\b",
+										"constant.language.pluto support.constant.builtin.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![^.]\\.|:)\\b(self)\\b",
+										"variable.language.self.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![^.]\\.|:)\\b((pluto_)?parent)\\b",
+										"variable.language.parent.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![^.]\\.|:)\\b(assert|collectgarbage|dofile|error|getfenv|getmetatable|ipairs|loadfile|loadstring|module|next|pairs|pcall|print|rawequal|rawget|rawset|require|select|setfenv|setmetatable|tonumber|tostring|type|unpack|xpcall)\\b(?=\\s*(?:[({\"']|\\[\\[))",
+										"support.function.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\b(?<!(?<!\\.)\\.)(?<!:)(coroutine|package|string|utf8|table|math|io|os|debug)\\b",
+										"support.function.library.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\b(and|or|not)\\b",
+										"keyword.operator.logical.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"!",
+										"keyword.operator.logical.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?=\\s*(?:[({\"']|\\$[\"']|\\[\\[))",
+										"support.function.any-method.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<=[^.]\\.|:)\\b([a-zA-Z_][a-zA-Z0-9_]*)",
+										"variable.other.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\.\\b",
+										"punctuation.accessor.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"captures",
+										"name"
+									],
+									"string": [
+										"\\b(\\??:)([a-zA-Z0-9_]+)(\\??)",
+										"meta.method-call.pluto"
+									],
+									"dict": {
+										"key": [
+											"1",
+											"2",
+											"3"
+										],
+										"dict": [
+											{
+												"key": "name",
+												"string": "punctuation.accessor.pluto"
+											},
+											{
+												"key": "name",
+												"string": "support.function.pluto"
+											},
+											{
+												"key": "name",
+												"string": "punctuation.accessor.pluto"
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										":",
+										"punctuation.separator.colon.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										",",
+										"punctuation.separator.comma.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										";",
+										"punctuation.terminator.pluto"
+									]
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"\\[",
+										"\\]",
+										"meta.destructuring.pluto"
+									],
+									"dict": [
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.section.destructuring.begin.pluto"
+											}
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.section.destructuring.end.pluto"
+											}
+										}
+									],
+									"array": {
+										"dict": {
+											"key": "include",
+											"string": "#pluto"
+										}
+									}
+								}
+							]
+						}
+					},
+					{
+						"key": "patterns",
+						"array": {
+							"dict": {
+								"key": [
+									"begin",
+									"beginCaptures",
+									"end",
+									"endCaptures",
+									"name",
+									"patterns"
+								],
+								"string": [
+									"--\\[(=*)\\[",
+									"\\]\\1\\]",
+									"comment.block.pluto"
+								],
+								"dict": [
+									{
+										"key": "0",
+										"dict": {
+											"key": "name",
+											"string": "punctuation.definition.comment.begin.pluto"
+										}
+									},
+									{
+										"key": "0",
+										"dict": {
+											"key": "name",
+											"string": "punctuation.definition.comment.end.pluto"
+										}
+									}
+								],
+								"array": {
+									"dict": {
+										"key": "include",
+										"string": "#annotations"
+									}
+								}
+							}
+						}
+					},
+					{
+						"key": "patterns",
+						"array": {
+							"dict": [
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![\\w\\d])0[xX][0-9A-Fa-f][0-9A-Fa-f_]*(\\.[0-9A-Fa-f]+)?([eE]-?\\d*)?([pP][-+]\\d+)?",
+										"constant.numeric.float.hexadecimal.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![\\w\\d])0[xX][0-9A-Fa-f][0-9A-Fa-f_]*(?![pPeE.0-9])",
+										"constant.numeric.integer.hexadecimal.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"0[bB][01][01_]*",
+										"constant.numeric.integer.binary.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![\\w\\d])\\d[0-9_]*(?![pPeE.0-9])",
+										"constant.numeric.integer.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"(?<![\\w\\d])\\d+(\\.\\d+)?([eE]-?\\d*)?",
+										"constant.numeric.float.pluto"
+									]
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"'",
+										"'",
+										"string.quoted.single.pluto"
+									],
+									"dict": [
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "string.quoted.single.pluto punctuation.definition.string.begin.pluto"
+											}
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "string.quoted.single.pluto punctuation.definition.string.end.pluto"
+											}
+										}
+									],
+									"array": {
+										"dict": [
+											{
+												"key": [
+													"begin",
+													"end",
+													"name",
+													"patterns"
+												],
+												"string": [
+													"(?<!\\\\z)\\n",
+													"(?=')",
+													"invalid.multiline-quoted-string.pluto"
+												],
+												"array": {
+													"dict": {
+														"key": "include",
+														"string": "#pluto"
+													}
+												}
+											},
+											{
+												"key": "include",
+												"string": "#string_inner"
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"\"",
+										"\"",
+										"string.quoted.double.pluto"
+									],
+									"dict": [
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "string.quoted.double.pluto punctuation.definition.string.begin.pluto"
+											}
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "string.quoted.double.pluto punctuation.definition.string.end.pluto"
+											}
+										}
+									],
+									"array": {
+										"dict": [
+											{
+												"key": [
+													"begin",
+													"end",
+													"name",
+													"patterns"
+												],
+												"string": [
+													"(?<!\\\\z)\\n",
+													"(?=\")",
+													"invalid.multiline-quoted-string.pluto"
+												],
+												"array": {
+													"dict": {
+														"key": "include",
+														"string": "#pluto"
+													}
+												}
+											},
+											{
+												"key": "include",
+												"string": "#string_inner"
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"(\\$)(')",
+										"'",
+										"meta.string.quoted.single.interpolation.pluto"
+									],
+									"dict": [
+										{
+											"key": [
+												"1",
+												"2"
+											],
+											"dict": [
+												{
+													"key": "name",
+													"string": "keyword.operator.pluto"
+												},
+												{
+													"key": "name",
+													"string": "string.quoted.single.pluto punctuation.definition.string.begin.pluto"
+												}
+											]
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.definition.string.end.pluto string.pluto"
+											}
+										}
+									],
+									"array": {
+										"dict": [
+											{
+												"key": [
+													"begin",
+													"end",
+													"name",
+													"patterns"
+												],
+												"string": [
+													"\\n",
+													"(?=')",
+													"invalid.multiline-quoted-string.pluto"
+												],
+												"array": {
+													"dict": {
+														"key": "include",
+														"string": "#pluto"
+													}
+												}
+											},
+											{
+												"key": "include",
+												"string": "#string_inner"
+											},
+											{
+												"key": "include",
+												"string": "#string_interpolation"
+											},
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													"[^']",
+													"string.quoted.single.pluto"
+												]
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"(\\$)(\")",
+										"\"",
+										"meta.string.quoted.double.interpolation.pluto"
+									],
+									"dict": [
+										{
+											"key": [
+												"1",
+												"2"
+											],
+											"dict": [
+												{
+													"key": "name",
+													"string": "keyword.operator.pluto"
+												},
+												{
+													"key": "name",
+													"string": "string.quoted.double.pluto punctuation.definition.string.begin.pluto"
+												}
+											]
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "string.pluto punctuation.definition.string.end.pluto"
+											}
+										}
+									],
+									"array": {
+										"dict": [
+											{
+												"key": [
+													"begin",
+													"end",
+													"name",
+													"patterns"
+												],
+												"string": [
+													"\\n",
+													"(?=\")",
+													"invalid.multiline-quoted-string.pluto"
+												],
+												"array": {
+													"dict": {
+														"key": "include",
+														"string": "#pluto"
+													}
+												}
+											},
+											{
+												"key": "include",
+												"string": "#string_inner"
+											},
+											{
+												"key": "include",
+												"string": "#string_interpolation"
+											},
+											{
+												"key": [
+													"match",
+													"name"
+												],
+												"string": [
+													"[^\"]",
+													"string.quoted.double.pluto"
+												]
+											}
+										]
+									}
+								},
+								{
+									"key": [
+										"begin",
+										"beginCaptures",
+										"end",
+										"endCaptures",
+										"name",
+										"patterns"
+									],
+									"string": [
+										"\\{",
+										"\\}",
+										"meta.table.pluto"
+									],
+									"dict": [
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.section.table.begin.pluto"
+											}
+										},
+										{
+											"key": "0",
+											"dict": {
+												"key": "name",
+												"string": "punctuation.section.table.end.pluto"
+											}
+										}
+									],
+									"array": {
+										"dict": {
+											"key": "include",
+											"string": "#pluto"
+										}
+									}
+								}
+							]
+						}
+					},
+					{
+						"key": "patterns",
+						"array": {
+							"dict": [
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\\\[abfnrtvz\\\\\"'\\n]",
+										"constant.character.escape.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\\\\\d{1,3}",
+										"constant.character.escape.byte.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\\\x[0-9A-Fa-f][0-9A-Fa-f]",
+										"constant.character.escape.byte.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\\\u\\{[0-9A-Fa-f]+\\}",
+										"constant.character.escape.unicode.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\\\{",
+										"constant.character.escape.interpolate.pluto"
+									]
+								},
+								{
+									"key": [
+										"match",
+										"name"
+									],
+									"string": [
+										"\\\\.",
+										"invalid.illegal.character.escape.pluto"
+									]
+								}
+							]
+						}
+					},
+					{
+						"key": [
+							"begin",
+							"beginCaptures",
+							"end",
+							"endCaptures",
+							"name",
+							"patterns"
+						],
+						"string": [
+							"\\{",
+							"\\}",
+							"meta.interpolation.pluto"
+						],
+						"dict": [
+							{
+								"key": "0",
+								"dict": {
+									"key": "name",
+									"string": "punctuation.section.interpolation.begin.pluto"
+								}
+							},
+							{
+								"key": "0",
+								"dict": {
+									"key": "name",
+									"string": "punctuation.section.interpolation.end.pluto"
+								}
+							}
+						],
+						"array": {
+							"dict": {
+								"key": "include",
+								"string": "#pluto"
+							}
+						}
+					},
+					{
+						"key": "patterns",
+						"array": {
+							"dict": {
+								"key": [
+									"match",
+									"name"
+								],
+								"string": [
+									"\\@(param|see|comment|usage|return|field|author|set|class|name|pragma|alias|copyright|summary|description|release|license|fixme|todo|warning|raise|charset|within|local|export|private|constructor|static|include|module|script|example|topic|submodule|classmod|file|function|lfunction|table|section|type|annotation|factory|pluto_warnings|pluto_use|fallthrough)",
+									"entity.name.tag.documentation.pluto"
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"_version": "1.0"
+	}
+}
